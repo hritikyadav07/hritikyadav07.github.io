@@ -1,11 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hritik Yadav | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Theme changer script
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+        }
+    </script>
+    <style>
+        [data-theme="dark"] {
+            --bg-color: #1e293b;
+            --text-color: #8d9eb3;
+            --primary-color: #3b82f6;
+            --secondary-color: #1d4ed8;
+        }
+        [data-theme="light"] {
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --primary-color: #3b82f6;
+            --secondary-color: #1d4ed8;
+        }
+    </style>
 </head>
-<body>
-    Hello world!!!
+<body class="bg-[var(--bg-color)] text-[var(--text-color)]">
+    <header class="fixed top-0 w-full bg-[var(--bg-color)] shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-xl font-bold text-[var(--primary-color)]">Hritik Yadav</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-[var(--primary-color)]">About</a></li>
+                    <li><a href="#skills" class="hover:text-[var(--primary-color)]">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-[var(--primary-color)]">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-[var(--primary-color)]">Contact</a></li>
+                </ul>
+            </nav>
+            <button onclick="toggleTheme()" class="ml-4 px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-[var(--secondary-color)]">
+                Toggle Theme
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="text-center py-64 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white">
+        <h1 class="text-4xl font-bold mb-4">Hello, I'm Hritik Yadav</h1>
+        <p class="text-lg mb-6">A passionate developer focused on creating elegant solutions through code</p>
+        <a href="#projects" class="px-6 py-3 bg-white text-[var(--primary-color)] rounded shadow hover:bg-gray-200">View My Work</a>
+        <a href="#contact" class="ml-4 px-6 py-3 bg-white text-[var(--primary-color)] rounded shadow hover:bg-gray-200">Contact Me</a>
+    </section>
+
+    <section id="about" class="py-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <p class="mb-4">Welcome to my portfolio! I am a dedicated developer with a passion for building innovative web solutions...</p>
+                    <p class="mb-4">My journey in development began with a curiosity about how things work on the web...</p>
+                    <p>When I'm not coding, you can find me exploring new technologies...</p>
+                </div>
+                <div class="w-full md:w-1/2 text-center">
+                    <img src="profile.jpeg" alt="Hritik Yadav" class="h-64 w-64 rounded-full object-cover mx-auto shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 bg-[var(--bg-color)]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-html5 text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-css3-alt text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-js text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-react text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>React</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-node-js text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fas fa-database text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>SQL</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-git-alt text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>Git</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-python text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>Python</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-node-js text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>Express</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fas fa-database text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>MongoDB</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-git-alt text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>Java</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded shadow hover:shadow-lg">
+                    <i class="fab fa-python text-4xl text-[var(--primary-color)] mb-2"></i>
+                    <p>PostgreSQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded shadow hover:shadow-lg">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1" class="rounded-t">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)] mb-2">Project One</h3>
+                        <p class="mb-4">A responsive web application built with React and Node.js</p>
+                        <a href="#" class="px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-[var(--secondary-color)]">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded shadow hover:shadow-lg">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2" class="rounded-t">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)] mb-2">Project Two</h3>
+                        <p class="mb-4">E-commerce platform with user authentication and product management</p>
+                        <a href="#" class="px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-[var(--secondary-color)]">View Project</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded shadow hover:shadow-lg">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3" class="rounded-t">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)] mb-2">Project Three</h3>
+                        <p class="mb-4">Mobile application developed with React Native for iOS and Android</p>
+                        <a href="#" class="px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-[var(--secondary-color)]">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-[var(--bg-color)]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+            <form class="max-w-lg mx-auto bg-white p-6 rounded shadow">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 font-bold">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 font-bold">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block mb-2 font-bold">Subject</label>
+                    <input type="text" id="subject" name="subject" class="w-full p-3 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block mb-2 font-bold">Message</label>
+                    <textarea id="message" name="message" class="w-full p-3 border rounded" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="w-full px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-[var(--secondary-color)]">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-6 bg-[var(--bg-color)] text-center">
+        <div class="container mx-auto">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="https://github.com/hritikyadav07" target="_blank" class="text-[var(--primary-color)] hover:text-[var(--secondary-color)]"><i class="fab fa-github text-2xl"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-[var(--primary-color)] hover:text-[var(--secondary-color)]"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank" class="text-[var(--primary-color)] hover:text-[var(--secondary-color)]"><i class="fab fa-twitter text-2xl"></i></a>
+            </div>
+            <p>&copy; 2023 Hritik Yadav. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
